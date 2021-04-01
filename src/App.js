@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import {connect} from "react-redux";
+import Student from "./components/Student";
+import University from "./components/University";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+    return (
+        <div className="container m-4">
+            <h1> Redux - ver.1 </h1>
+            <h6> *Practice building React application with Redux. </h6>
+            <div className="row mt-4">
+                <div className="col-sm">
+                    <Student/>
+                </div>
+                <div className="col-sm">
+                    <University/>
+                </div>
+            </div>
+        </div>
+    )
 }
 
-export default App;
+// const mapStateToProps = (store) => ({
+//     student: store.studentReducer.student,
+//     university: store.universityReducer.university
+// })
+
+export default connect(null)(App);

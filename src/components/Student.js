@@ -15,6 +15,7 @@ function Student(props) {
         setNewStudentName('')
     }
 
+    //new function...
     function validate(currentValue){
         const valMessage = [];
         if (currentValue.match(/[0-9,.<>;]/g)) valMessage.push("*Use only letters");

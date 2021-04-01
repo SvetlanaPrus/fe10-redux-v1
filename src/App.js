@@ -5,7 +5,6 @@ import University from "./components/University";
 
 
 function App() {
-    //test
 
     return (
         <div className="container m-4">
